@@ -1,5 +1,8 @@
 package task12;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class _21_Array_reverse {
 
     public static void main(String[] args) {
@@ -12,9 +15,13 @@ public class _21_Array_reverse {
          */
 
         //Kodu aşağıya yazınız.
-
+        Scanner input=new Scanner(System.in);
+        System.out.println("bir sayı giriniz");
+        int[] sayı= new int[]{input.nextInt()};
+        System.out.println("Arrays.toString(sayı) = " + Arrays.toString(sayı));
 
     }
-}
+    }
+
 
 

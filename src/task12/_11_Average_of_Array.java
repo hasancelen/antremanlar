@@ -10,7 +10,11 @@ public class _11_Average_of_Array {
          */
 
         //Kodu aşağıya yazınız.
-
-
+int [] array={12, 14 , 21 ,23 , 10 ,4};
+int toplam=0;
+        for (int i = 0; i < array.length-1; i++) {
+            toplam+=array[i];
+        }
+        System.out.println("ortalama : "+toplam/array.length);
     }
 }

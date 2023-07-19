@@ -1,5 +1,7 @@
 package task12;
 
+import java.util.ArrayList;
+
 public class _04_Create_Array_String {
 
     public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class _04_Create_Array_String {
 
         // Kodu aşağıya yazınız..
 
-
+String [] array={"new jersey" , "new york", "boston","California"};
+        System.out.println("array.length = " + array.length);
     }
 }

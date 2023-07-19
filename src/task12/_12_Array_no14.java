@@ -1,5 +1,7 @@
 package task12;
 
+import java.util.Arrays;
+
 public class _12_Array_no14 {
 
     public static void main(String[] args) {
@@ -20,8 +22,10 @@ public class _12_Array_no14 {
 
         // code start here
 
-
-
+int [] sayı={1,2,3,4};
+        Arrays.sort(sayı);
+        String sayı1=Arrays.toString(sayı);
+        System.out.println(sayı1);
 
     }
 }

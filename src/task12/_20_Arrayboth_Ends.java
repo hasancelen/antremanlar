@@ -1,5 +1,7 @@
 package task12;
 
+import java.util.Arrays;
+
 public class _20_Arrayboth_Ends {
 
     public static void main(String[] args) {
@@ -13,7 +15,9 @@ public class _20_Arrayboth_Ends {
     Sonuç bu şekilde olmalıdır. [1, 4]
       */
         //Kodu aşağıya yazınız..
-
+int [] sayı={1,2,3,4};
+int [] sayı1={sayı[0],sayı[sayı.length-1]};
+        System.out.println("Arrays.toString(sayı1) = " + Arrays.toString(sayı1));
 
     }
 }

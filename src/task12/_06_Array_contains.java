@@ -13,6 +13,14 @@ public class _06_Array_contains {
 
         //Kodu aşağıya yazınız..
 
+String [] array={"Apple", "Orange" , "Banana" , "Pineapple"};
+       boolean varmı=false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].contains("Apple")){
+                varmı=true;
+            }else ;
 
+        }
+        System.out.println("varmı = " + varmı);;
     }
 }

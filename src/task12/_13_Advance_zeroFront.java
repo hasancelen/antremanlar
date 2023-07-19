@@ -1,5 +1,7 @@
 package task12;
 
+import java.util.Arrays;
+
 public class _13_Advance_zeroFront {
 
     public static void main(String[] args) {
@@ -17,6 +19,9 @@ public class _13_Advance_zeroFront {
        */
 
         // Kodu aşağıya yazınız..
+int [] sayı={1,0,0,1,0};
+        Arrays.sort(sayı);
+        System.out.println("Arrays.toString(sayı) = " + Arrays.toString(sayı));
 
 
     }
