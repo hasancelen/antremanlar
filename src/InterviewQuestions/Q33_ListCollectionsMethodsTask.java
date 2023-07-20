@@ -1,5 +1,9 @@
 package InterviewQuestions;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class Q33_ListCollectionsMethodsTask {
     // part 1: create list of 5 numbers from user input
     // sort the list in reverse order and print it
@@ -19,6 +23,32 @@ public class Q33_ListCollectionsMethodsTask {
 
 
     public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        ArrayList<Integer>sayılist=new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            System.out.println("bir şeyler giresen");
+sayılist.add(input.nextInt());
+        }
+        System.out.println("ilk hali = " + sayılist);
+        Collections.sort(sayılist,Collections.reverseOrder());
+        System.out.println("tersten yazılmış hali = " + sayılist);
 
+        //listeyi karıştır ve yaztır
+
+        Collections.shuffle((sayılist));
+        System.out.println("karışık hali "+sayılist);
+
+       //3 br kaydırma
+    Collections.rotate(sayılist,3);
+        System.out.println("sayılist 3 br kaydırılmış hali "+sayılist );
+
+        // maksimum sayıyı ve minimum sayıyı bulun, yazdırın
+        // tüm maksimum sayıları minimum sayı ile değiştir
+
+
+        System.out.println("en büyük sayı "+ Collections.max(sayılist));
+        System.out.println("en küçük sayı "+Collections.min(sayılist));
+        Collections.replaceAll(sayılist,Collections.max(sayılist),Collections.min(sayılist));
+        System.out.println(sayılist);
     }
 }
