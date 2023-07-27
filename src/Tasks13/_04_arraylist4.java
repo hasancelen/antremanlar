@@ -1,5 +1,9 @@
 package Tasks13;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class _04_arraylist4 {
 
     /*
@@ -18,10 +22,20 @@ public class _04_arraylist4 {
      */
 
     public static void main(String[] args) {
+        ArrayList<String > list=new ArrayList<>(Arrays.asList("yellow" , "red" , "blue" , "red" , "blue"));
+        String s1 = "blue";
+        String s2 = "yellow";
+        System.out.println(changeInArraylist(list, s2, s1));
 
 
+    }
 
+    private static ArrayList<String> changeInArraylist(ArrayList<String> list, String s2, String s1) {
+        for (String avuc:list) {
+                Collections.replaceAll(list,"blue","yellow");
 
+        }
+        return list;
     }
 
 

@@ -13,5 +13,10 @@ public class Q36_AddedOrNotTask {
 
     public static void main(String[] args) {
 
+
+
+
+
+
     }
 }

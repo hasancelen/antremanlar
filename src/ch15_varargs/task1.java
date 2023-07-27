@@ -23,9 +23,12 @@ output : ali
         concat(arr2);
     }
 
-    private static void concat(String...arr2) {
-        String ss="";
-        for (String w:arr2){
+    private static void concat(String...arr) {
+        for (String a:arr) {
+            System.out.print(a);
+
+        }
     }
-        System.out.println(Arrays.toString(arr2));
-}}
+
+
+}

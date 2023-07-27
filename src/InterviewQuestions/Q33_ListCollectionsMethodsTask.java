@@ -23,32 +23,41 @@ public class Q33_ListCollectionsMethodsTask {
 
 
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        ArrayList<Integer>sayılist=new ArrayList<>();
+
+        Scanner input = new Scanner(System.in);
+        ArrayList<Integer> sayıList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            System.out.println("bir şeyler giresen");
-sayılist.add(input.nextInt());
+            System.out.print("agam " + (i + 1) + ". sayıyı  giresen : ");
+            sayıList.add(input.nextInt());
         }
-        System.out.println("ilk hali = " + sayılist);
-        Collections.sort(sayılist,Collections.reverseOrder());
-        System.out.println("tersten yazılmış hali = " + sayılist);
+        System.out.println("sayıList ilk giris sıra hali  = " + sayıList);
+        // listeyi ters sırada sırala ve yazdır
 
-        //listeyi karıştır ve yaztır
+        Collections.reverse(sayıList);
 
-        Collections.shuffle((sayılist));
-        System.out.println("karışık hali "+sayılist);
+        System.out.println("sayıList ters giris sıra hali  = " + sayıList);
 
-       //3 br kaydırma
-    Collections.rotate(sayılist,3);
-        System.out.println("sayılist 3 br kaydırılmış hali "+sayılist );
+        // listeyi karıştır ve yazdır
 
-        // maksimum sayıyı ve minimum sayıyı bulun, yazdırın
+        Collections.shuffle(sayıList);//list elemanları randon sıralandı
+
+        System.out.println("sayıList karısık hali  = " + sayıList);
+
+        // 3 br saga kaydir ve yazdır
+        Collections.rotate(sayıList, 3);
+        System.out.println("sayıList 3 birim kaymış hali  = " + sayıList);
+
+        //  maksimum sayıyı ve minimum sayıyı bulun, yazdırın
+        int maxEleman = Collections.max(sayıList);
+        int minEleman = Collections.min(sayıList);
+        // System.out.println("list max eleman : "+Collections.max(sayıList));
+        System.out.println("list max eleman : " + maxEleman);
+        //   System.out.println("list min eleman : "+Collections.min(sayıList));
+        System.out.println("list min eleman : " + minEleman);
         // tüm maksimum sayıları minimum sayı ile değiştir
+        //  Collections.replaceAll(sayıList,Collections.max(sayıList),Collections.min(sayıList));
+        Collections.replaceAll(sayıList, maxEleman, minEleman);
 
-
-        System.out.println("en büyük sayı "+ Collections.max(sayılist));
-        System.out.println("en küçük sayı "+Collections.min(sayılist));
-        Collections.replaceAll(sayılist,Collections.max(sayılist),Collections.min(sayılist));
-        System.out.println(sayılist);
+        System.out.println("max meim değiştikten sonra list : " + sayıList);
     }
 }

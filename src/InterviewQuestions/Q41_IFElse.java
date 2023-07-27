@@ -11,6 +11,14 @@ public class Q41_IFElse {
 		 */
 
     public static void main(String[] args) {
-
+        for (int i = 1; i <= 30; i++) {
+            if (i %3==0&&i%5==0 ) {// 15 k sarti
+                System.out.print("RockStar ");
+            }else if (i %3==0){// 3k sartı
+                System.out.print("Rock ");
+            }else if (i %5==0){// 5k sartı
+                System.out.print("Star ");
+            }else System.out.print(i+" ");
+        }
     }
 }

@@ -13,23 +13,24 @@ public class Q30_ExponentialNumber {
 
     // 4, 3 --> 4^3= 4*4*4 = 64
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        System.out.println("agam taban giresen");
-        int taban= input.nextInt();
+        Scanner input = new Scanner(System.in);
+        System.out.print("agam taban giresen : ");
+        int taban = input.nextInt();
+        int sonuc = 1;
+        System.out.print("agam üss giresen : ");
+        int uss = input.nextInt();
 
-        System.out.println("agam ust giresen");
-        int ust= input.nextInt();
-int sonuc=1;
-//       for (int i = 0; i <ust; i++) {
-//onuc*=taban;
-//       }
-//       System.out.println("sonuc = " + sonuc);
+       // System.out.println("   ***  for loop   ***   ");
+       // for (int i = 1; i <= uss; i++) {
+       //     sonuc *= taban;
+       // }
 
-        while (ust>0){
-            sonuc*=taban;
-            ust--;
+        System.out.println("   ***  while loop   ***   ");
+        while (uss != 0) {
+            sonuc *= taban;
+            uss--;
         }
-        System.out.println("sonuc = " + sonuc);
+        System.out.println(sonuc);
     }
 
 }

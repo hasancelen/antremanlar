@@ -20,10 +20,20 @@ public class _01_arraylist1 {
 
     public static void main(String[] args) {
 
-        ArrayList<String>  ArrayList = new ArrayList<>(Arrays.asList("Orange" ,"Kiwi" , "Peach" , "Banana" , "Orange" ))  ;
-        String Orange;
+          String meyve="orange";
+          ArrayList<String> list=new ArrayList<>(Arrays.asList("Orange" , "Kiwi" , "Peach" , "Banana" , "Orange"));
+          getcount(list,meyve);
+        System.out.println("getcount(list,meyve) = " + getcount(list, meyve));
 
 
+    }
+
+    private static int getcount(ArrayList<String> list, String meyve) {
+        int count=0;
+        for (String avuc:list) {
+            if (avuc.toLowerCase().contains(meyve.toLowerCase())) count++;
+        }
+        return count;
     }
 
 

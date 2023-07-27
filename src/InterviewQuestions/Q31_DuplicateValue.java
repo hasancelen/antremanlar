@@ -15,23 +15,22 @@ public class Q31_DuplicateValue {
          */
 
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        System.out.println("bir şeyler giresen");
-        String metin= input.nextLine();
-        ArrayList<Character>output=new ArrayList<>();
-        char []arr=metin.toCharArray();
-        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
+        Scanner input = new Scanner(System.in);
+        System.out.printf("agam bişeyler giresen : ");
+        String metin = input.nextLine();// emine
+        ArrayList<Character> output = new ArrayList<>();//tekrarlana elemanların depolanacagı bos list
+        char[] arr = metin.toCharArray();// metin herbir karakter arr ya atandı
+        System.out.println(Arrays.toString(arr));// [j, a, v, a, c, a, n, J, a, v, v, a, n, u, r]
+
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length ; j++) {
-                if (arr[i]==arr[j]&&!output.contains(arr[j])){
-                    System.out.print(arr[j]);
-                    output.add(arr[j]);
+            for (int j =i+1; j < arr.length; j++) {
+                if (arr[i] ==arr[j]&& !output.contains(arr[j])) {
+                   // System.out.print(arr[j]);
+                    output.add(arr[j]);//tekrarlayan eleman liste eklendi
                 }
-
             }
-
         }
-
         System.out.println(output);
 
     }

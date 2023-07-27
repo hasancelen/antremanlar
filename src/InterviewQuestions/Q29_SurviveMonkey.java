@@ -12,22 +12,24 @@ public class Q29_SurviveMonkey {
     boolean monkeyAlive = true;
     */
     public static void main(String[] args) {
-        int bananamiktarı=165;
-        int survivaldays=1;
+        int numberOfBananas = 165, survivalDays = 1;
         boolean monkeyAlive = true;
-        System.out.println("ağam senin maymun dünde 4 muz yer");
+        System.out.println("Agam senin maymın günde 4 muz yer  : ) ");
 
         do {
-bananamiktarı-=4;
-            System.out.println("agam senin maymunun kalan muz sayısı "+bananamiktarı);
-survivaldays++;
-if (bananamiktarı<4){
-    monkeyAlive=false;
-}
-        }while(monkeyAlive);
-        System.out.println("survivaldays = " + (survivaldays-1));
-        System.out.println("bananamiktarı = " + bananamiktarı);
-        System.out.println("monkeyAlive = " + monkeyAlive);
+            numberOfBananas -= 4;// bir gün geçti
+            System.out.println("agam senin maymının kalan muz sayısı : " + numberOfBananas);
+            survivalDays++;//adada yaşadiğı gun sayısı 1 arttı
+            if (numberOfBananas < 4) {
+                monkeyAlive = false;
+                System.out.println("Agam bugun " + survivalDays + ". gun muz bitti maymın bizimle değil adaya veda etmeli");
+            } else System.out.println("Agam bugun " + survivalDays + ". gun maymın bizimle  adaya Dewamkeee :) ");
+
+
+        }
+        while (monkeyAlive);
+
+
     }
 
 }
