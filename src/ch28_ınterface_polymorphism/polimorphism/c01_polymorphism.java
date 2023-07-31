@@ -1,0 +1,57 @@
+package ch28_ınterface_polymorphism.polimorphism;
+class  şekil{
+    void çiz(){
+        System.out.println("bir şekil çizeceksin");}
+    void şekil(){
+        System.out.println("bir şekil çizen method");}
+}
+class daire extends şekil{
+    void çiz(){
+        System.out.println("bir daire çizeceksin");
+    }
+    void daire(){
+        System.out.println("bir daire çizen method");}
+}
+class kare extends şekil{
+    void çiz(){
+        System.out.println("bir kare çizeceksin");}
+    void kare(){
+        System.out.println("bir kare çizen method");}
+}
+public class c01_polymorphism {
+    public static void main(String[] args) {
+
+
+        şekil şekil = new şekil();
+        şekil daire = new daire();
+        şekil kare = new kare();
+
+        şekil.şekil();
+        şekil.çiz();
+
+
+        daire.çiz();
+        daire.şekil();
+
+
+        kare.şekil();
+        kare.çiz();
+ /*
+        Sekil daire = new Daire(); ifadesi, Sekil sınıfının bir örneğini oluşturur ve ona Daire sınıfının bir
+         örneğini atar. Bu durumda, daire değişkeni Sekil sınıfının bir örneğine referans eder, ancak bu örnek
+         Daire sınıfının bir örneğidir. Bu durumda, daire değişkeni yalnızca Sekil sınıfının metotlarına erişebilir,
+          ancak Daire sınıfına özgü metotlara erişemez.
+
+Daire d2 = new Daire(); ifadesi, Daire sınıfının bir örneğini oluşturur ve ona d2 değişkeni referans eder.
+Bu durumda, d2 değişkeni Daire sınıfının bir örneğine referans eder ve hem Sekil sınıfının hem de Daire
+sınıfının metotlarına erişebilir.
+
+The difference between d1 and d2 is their data types. d1 is declared as Sekil, which is the parent class of Daire,
+while d2 is declared as Daire, which is the actual class of the object. As a result, d1 can only access the methods
+ and properties that are defined in the Sekil class, even if it refers to a Daire object. On the other hand, d2
+ can access all the methods and properties defined in both the Daire and Sekil classes, since it is a Daire object.
+         */
+
+    }
+
+}
